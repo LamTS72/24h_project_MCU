@@ -1,0 +1,10 @@
+/*
+ * global.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: LENOVO
+ */
+
+#include"global.h"
+
+int status = 0;

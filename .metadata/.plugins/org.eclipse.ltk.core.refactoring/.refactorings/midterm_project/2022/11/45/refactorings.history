@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;midterm_project/Core/Inc/fms_automic.h&apos; to &apos;fsm_automic.h&apos;" description="Rename resource &apos;fms_automic.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/fms_automic.h" name="fsm_automic.h" stamp="1667617802862" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;midterm_project/Core/Inc/fsm_automic.h&apos; to &apos;fsm_automatic.h&apos;" description="Rename resource &apos;fsm_automic.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/fsm_automic.h" name="fsm_automatic.h" stamp="1667617993035" updateReferences="true"/>
+</session>

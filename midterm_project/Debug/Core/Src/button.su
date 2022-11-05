@@ -1,0 +1,5 @@
+button.c:26:5:isRESET_Pressed	4	static
+button.c:34:5:isINC_Pressed	4	static
+button.c:41:5:isDEC_Pressed	4	static
+button.c:49:6:subKeyProcess	16	static
+button.c:61:6:getKeyInput	16	static

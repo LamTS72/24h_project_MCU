@@ -1,0 +1,31 @@
+/*
+ * global.h
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: LENOVO
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+
+#include "software_timer.h"
+#include "button.h"
+#include"main.h"
+
+#define INIT 	1
+#define AUTO_ZERO 2
+#define AUTO_ONE 3
+#define AUTO_TWO 4
+#define AUTO_THREE 5
+#define AUTO_FOUR 6
+#define AUTO_FIVE 7
+#define AUTO_SIXE 8
+#define AUTO_SEVEN 9
+#define AUTO_THREE 10
+#define AUTO_THREE 11
+
+
+extern int status;
+
+#endif /* INC_GLOBAL_H_ */

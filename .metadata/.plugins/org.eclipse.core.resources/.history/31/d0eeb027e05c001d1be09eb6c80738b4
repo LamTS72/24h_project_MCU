@@ -1,0 +1,163 @@
+/*
+ * fsm_manual.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: LENOVO
+ */
+
+
+#include "fsm_manual.h"
+#include "led7_segment.h"
+
+void fsm_manual_run(){
+	switch(status){
+		case ZERO:
+			display7SEG(0);
+			if(isINC_Pressed() == 1){
+				status = ONE;
+				setTimer1(1000);
+			}
+			if(isDEC_Pressed() == 1){
+				status = NINE;
+				setTimer1(1000);
+			}
+			break;
+		case ONE:
+			display7SEG(1);
+			if(timer1_flag == 1){
+				status = AUTO_ZERO;
+				setTimer1(1000);
+			}
+			if(isINC_Pressed() == 1){
+				status = TWO;
+				setTimer1(10000);
+			}
+			if(isDEC_Pressed() == 1){
+				status = ZERO;
+				setTimer1(1000);
+			}
+			break;
+		case TWO:
+			display7SEG(2);
+			if(timer1_flag == 1){
+				status = AUTO_ONE;
+				setTimer1(1000);
+			}
+			if(isINC_Pressed() == 1){
+				status = THREE;
+				setTimer1(10000);
+			}
+			if(isDEC_Pressed() == 1){
+				status = ONE;
+				setTimer1(1000);
+			}
+			break;
+		case THREE:
+			display7SEG(3);
+			if(timer1_flag == 1){
+				status = AUTO_TWO;
+				setTimer1(1000);
+			}
+			if(isINC_Pressed() == 1){
+				status = FOUR;
+				setTimer1(10000);
+			}
+			if(isDEC_Pressed() == 1){
+				status = TWO;
+				setTimer1(1000);
+			}
+			break;
+		case FOUR:
+			display7SEG(4);
+			if(timer1_flag == 1){
+				status = AUTO_THREE;
+				setTimer1(1000);
+			}
+			if(isINC_Pressed() == 1){
+				status = FIVE;
+				setTimer1(10000);
+			}
+			if(isDEC_Pressed() == 1){
+				status = THREE;
+				setTimer1(1000);
+			}
+			break;
+		case FIVE:
+			display7SEG(5);
+			if(timer1_flag == 1){
+				status = AUTO_FOUR;
+				setTimer1(1000);
+			}
+			if(isINC_Pressed() == 1){
+				status = SIX;
+				setTimer1(10000);
+			}
+			if(isDEC_Pressed() == 1){
+				status = FOUR;
+				setTimer1(1000);
+			}
+			break;
+		case SIX:
+			display7SEG(6);
+			if(timer1_flag == 1){
+				status = AUTO_FIVE;
+				setTimer1(1000);
+			}
+			if(isINC_Pressed() == 1){
+				status = SEVEN;
+				setTimer1(10000);
+			}
+			if(isDEC_Pressed() == 1){
+				status = FIVE;
+				setTimer1(1000);
+			}
+			break;
+		case SEVEN:
+			display7SEG(7);
+			if(timer1_flag == 1){
+				status = AUTO_SIX;
+				setTimer1(1000);
+			}
+			if(isINC_Pressed() == 1){
+				status = EIGTH;
+				setTimer1(10000);
+			}
+			if(isDEC_Pressed() == 1){
+				status = SIX;
+				setTimer1(1000);
+			}
+			break;
+		case EIGTH:
+			display7SEG(8);
+			if(timer1_flag == 1){
+				status = AUTO_SEVEN;
+				setTimer1(1000);
+			}
+			if(isINC_Pressed() == 1){
+				status = NINE;
+				setTimer1(10000);
+			}
+			if(isDEC_Pressed() == 1){
+				status = SEVEN;
+				setTimer1(1000);
+			}
+			break;
+		case NINE:
+			display7SEG(9);
+			if(timer1_flag == 1){
+				status = AUTO_EIGTH;
+				setTimer1(1000);
+			}
+			if(isINCPressed() == 1){
+				status = ZERO;
+				setTimer1(10000);
+			}
+			if(isButton2Pressed() == 1){
+				status = EIGTH;
+				setTimer1(1000);
+			}
+			break;
+		default:
+			break;
+	}
+}
